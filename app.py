@@ -23,7 +23,8 @@ class SudokuApp(tornado.web.Application):
             'static_path': os.path.join(os.path.dirname(os.path.abspath(__file__)), "static"),
             #'login_url': '/login/',
             'autoreload': True,
-            'debug': True,
+            'xsrf': True,
+            'debug': False,
         }
         super(SudokuApp, self).__init__(handlers, **settings)
 

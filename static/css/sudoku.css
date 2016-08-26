@@ -13,12 +13,11 @@ div.sudoku-grid {
 div.control-buttons {
 }
 
-/*
+
 button {
-      display: flex;
-      justify-content: space-between;
+      float: right;
+      margin: 0 9px;
 }
-*/
 
 table {
     margin: 24px auto;

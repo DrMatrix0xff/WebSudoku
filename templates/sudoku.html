@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sudoku Solution</title>
+    <link rel="icon" href="{{ static_url('img/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ static_url('css/sudoku.css') }}" type="text/css">
+  </head>
+  <body>
+    <div class="sudoku-grid">
+      <table>
+	<tr class="row">
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	</tr>
+	<tr class="row">
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	</tr>
+	<tr class="row">
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	</tr>
+	<tr class="row">
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	</tr>
+	<tr class="row">
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	</tr>
+	<tr class="row">
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	</tr>
+	<tr class="row">
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	</tr>
+	<tr class="row">
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	</tr>
+	<tr class="row">
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	  <td class="cell"><input type="text" maxlength="1"></td>
+	</tr>
+      </table>
+      <div class="control-buttons">
+        <button id="reset-puzzle">重置迷题</button>
+        <button id="solve-puzzle">开始摇滚</button>
+      </div>
+    </div>
+    <script src="{{ static_url('js/lib/jquery-2.1.4.min.js') }}"></script>
+    <script src="{{ static_url('js/solver.js') }}"></script>
+  </body>
+</html>
+
+

@@ -1,0 +1,63 @@
+/*
+body {
+    width:90%;
+    margin:0 10%;
+}
+*/
+div.sudoku-grid {
+    width: 720px;
+    padding: 24px 0;
+    margin: 0 auto;
+}
+
+div.control-buttons {
+}
+
+/*
+button {
+      display: flex;
+      justify-content: space-between;
+}
+*/
+
+table {
+    margin: 24px auto;
+    border-collapse:collapse;
+}
+
+input {
+    height:36px;
+    width:36px;
+    border-style:none;
+    text-align:center;
+}
+
+tr {
+    border:1px solid #555;
+}
+tr:first-child {
+    border-top:solid;
+}
+tr:nth-child(3n) td {
+    border-bottom:solid;
+}
+
+td {
+    border:1px solid #555;
+}
+td:first-child {
+    border-left:solid;
+}
+
+td:nth-child(3n) {
+    border-right:solid;
+}
+/*
+tr:first-child {
+    border-top:solid;
+}
+
+tr:nth-child(3n) td {
+    border-bottom:solid;
+}
+*/

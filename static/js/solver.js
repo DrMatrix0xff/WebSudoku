@@ -15,6 +15,9 @@ $(document).ready(
         }
         c0.focus(); 
         $(this).removeAttr('disabled');
+        if ($('#solve-puzzle').attr('disabled')) {
+          $('#solve-puzzle').removeAttr('disabled');
+        }
       });
 
     $('#solve-puzzle').click(
@@ -64,7 +67,7 @@ $(document).ready(
 	  }
 	  */
         });
-        $(this).removeAttr('disabled');
+        // $(this).removeAttr('disabled');
       });
   });
 

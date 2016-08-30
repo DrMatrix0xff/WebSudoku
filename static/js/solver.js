@@ -22,10 +22,10 @@ $(document).ready(
 
     $('#solve-puzzle').click(
       function () {
-        $(this).attr('disabled', 'disabled');
         var pz = [];
         var userin = [];
         var c, k, v, vv;
+        $(this).attr('disabled', 'disabled');
         for (k = 0; k < 81; k++) {
           c = $(inputs[String(k)]);
           vv = c.val();
@@ -33,6 +33,11 @@ $(document).ready(
             v = 0;
           } else {
             v = Number(vv);
+            if (isNaN(v)) {
+                c.css("background-color", "#bf4040");
+                window.alert('You have input invalid character');
+                return;
+            }
             userin.push(k);
           }
           pz.push(v);

@@ -25,7 +25,7 @@ $(document).ready(
         var pz = [];
         var userin = [];
         var c, k, v, vv;
-        $(this).attr('disabled', 'disabled');
+        var sbtn = $(this);
         for (k = 0; k < 81; k++) {
           c = $(inputs[String(k)]);
           vv = c.val();
@@ -52,6 +52,7 @@ $(document).ready(
           success: function (data, status, xhr) {
             var idx;
             if (data.eno === 0) {
+              sbtn.attr('disabled', 'disabled');
               for (var i = 0; i < data.solution.length; i++) {
                 var v = data.solution[i];
                 var c = $(inputs[String(i)]);

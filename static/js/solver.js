@@ -63,8 +63,12 @@ $(document).ready(
                   c = $(inputs[String(idx)]);
                   c.css("background-color", "#ccc");
               }
+            } else if (data.eno === 1) {
+              window.alert("Invalid input puzzle, please check again");
+            } else if (data.eno === 2) {
+              window.alert("No proper solution could be found");
             } else {
-              window.alert("Cannot Find Any Solution, Please Check Your Puzzle!");
+              return;
             }
           }
 	  /*

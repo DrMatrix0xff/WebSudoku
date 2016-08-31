@@ -18,15 +18,9 @@ class SolutionHandler(tornado.web.RequestHandler):
     def post(self):
         puzzle = self.get_body_argument('puzzle')
         puzzle = json.loads(puzzle)
-        res = {}
-        solution = yield sudokuer.solve(puzzle)
-        #solution = sudokuer.solve(puzzle)
-        #if isinstance(solution, Exception):
-        if solution is None:
-            res['eno'] = 1
-        else:
-            res['eno'] = 0
-        res['solution'] = solution
+        res = yield sudokuer.solve(puzzle)
+        #eno = res['eno']
         self.set_header('Content-Type', 'application/json')
         self.write(json.dumps(res))
+
 

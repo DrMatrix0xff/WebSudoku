@@ -6,12 +6,18 @@ import sudoku
 
 def solve(puzzle):
     f = tornado.concurrent.Future()
+    res = {}
     try:
+        res['eno'] = 0
         solution = sudoku.solve(puzzle)
-        f.set_result(solution)
-    except Exception as e:
-        #traceback.print_exc()
-        f.set_result(None)
+    except sudoku.CheckException:
+        res['eno'] = 1
+        solution = None
+    except sudoku.SolveException:
+        res['eno'] = 2
+        solution = None
+    res['solution'] = solution
+    f.set_result(res)
     return f
 
 if __name__ == '__main__':

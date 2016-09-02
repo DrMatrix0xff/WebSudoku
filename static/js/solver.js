@@ -35,7 +35,8 @@ $(document).ready(
             v = Number(vv);
             if (isNaN(v)) {
                 c.css("background-color", "#bf4040");
-                window.alert('You have input invalid character');
+                sbtn.attr('disabled', 'disabled');
+                window.alert('You have input non-digit character');
                 return;
             }
             userin.push(k);

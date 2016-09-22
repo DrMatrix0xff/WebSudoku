@@ -16,40 +16,66 @@ div.control-buttons {
 
 button {
       float: right;
-      margin: 0 9px;
+      margin: 6px 9px;
+      border: 2px solid #333;
+      background: #005bae;
+      /* background: transparent; */
+      padding: 8px 12px;
+      color: #FFF;
+}
+
+/*
+button:hover {
+    background: #FFF;
+    color: #005bae;
+    cursor: pointer;
+}
+*/
+
+button:hover:enabled {
+    background: #FFF;
+    color: #005bae;
+    cursor: pointer;
+    border: 2px solid #005bae;
+}
+
+button:hover:disabled {
+    background: #FFF;
+    color: #005bae;
+    border: 2px solid #005bae;
 }
 
 table {
     margin: 24px auto;
-    border-collapse:collapse;
+    border-collapse: collapse;
 }
 
 input {
-    height:36px;
-    width:36px;
-    border-style:none;
-    text-align:center;
+    height: 36px;
+    width: 36px;
+    border-style: none;
+    text-align: center;
 }
 
 tr {
-    border:1px solid #555;
+    border: 1px solid #555;
 }
 tr:first-child {
-    border-top:solid;
+    border-top: 3px solid;
 }
 tr:nth-child(3n) td {
-    border-bottom:solid;
+    border-bottom: 3px solid;
 }
 
 td {
-    border:1px solid #555;
+    border: 1px solid #555;
 }
 td:first-child {
-    border-left:solid;
+    border-left: 3px solid;
 }
 
 td:nth-child(3n) {
-    border-right:solid;
+    border-right: 3px solid;
 }
 /*
 tr:first-child {

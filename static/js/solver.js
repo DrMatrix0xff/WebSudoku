@@ -5,7 +5,6 @@ $(document).ready(
     $('#reset-puzzle').click(
       function () {
         var c, k;
-        $(this).attr('disabled', 'disabled');
         for (k = 0; k < 81; k++) {
           c = $(inputs[String(k)]);
           c.val("");
@@ -14,11 +13,32 @@ $(document).ready(
           }
         }
         c0.focus(); 
-        $(this).removeAttr('disabled');
         if ($('#solve-puzzle').attr('disabled')) {
           $('#solve-puzzle').removeAttr('disabled');
+          // $('#solve-puzzle').removeClass('toggle-color');
         }
       });
+
+    /* $("#reset-puzzle").hover(
+        function () {
+            $(this).addClass('toggle-color');
+        },
+        function () {
+            $(this).removeClass('toggle-color');
+        }
+    );
+
+    $("#solve-puzzle").hover(
+        function () {
+            if ($(this).attr('disabled')) {
+            } else {
+                $(this).addClass('toggle-color');
+            }
+        },
+        function () {
+            $(this).removeClass('toggle-color');
+        }
+    ); */
 
     $('#solve-puzzle').click(
       function () {
@@ -36,7 +56,7 @@ $(document).ready(
             if (isNaN(v)) {
                 c.css("background-color", "#bf4040");
                 sbtn.attr('disabled', 'disabled');
-                window.alert('You have input non-digit character');
+                $(window).alert('You have input non-digit character!');
                 return;
             }
             userin.push(k);
@@ -65,9 +85,9 @@ $(document).ready(
                   c.css("background-color", "#ccc");
               }
             } else if (data.eno === 1) {
-              window.alert("Invalid input puzzle, please check again");
+              $(window).alert("Invalid input puzzle, please check again");
             } else if (data.eno === 2) {
-              window.alert("No proper solution could be found");
+              $(window).alert("No proper solution could be found");
             } else {
               return;
             }

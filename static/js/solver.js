@@ -56,7 +56,7 @@ $(document).ready(
             if (isNaN(v)) {
                 c.css("background-color", "#bf4040");
                 sbtn.attr('disabled', 'disabled');
-                $(window).alert('You have input non-digit character!');
+                window.alert('You have input non-digit character!');
                 return;
             }
             userin.push(k);
@@ -85,9 +85,9 @@ $(document).ready(
                   c.css("background-color", "#ccc");
               }
             } else if (data.eno === 1) {
-              $(window).alert("Invalid input puzzle, please check again");
+              window.alert("Invalid input puzzle, please check again");
             } else if (data.eno === 2) {
-              $(window).alert("No proper solution could be found");
+              window.alert("No proper solution could be found");
             } else {
               return;
             }

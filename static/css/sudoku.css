@@ -1,23 +1,41 @@
-/*
+
 body {
-    width:90%;
-    margin:0 10%;
-}
-*/
-div.sudoku-grid {
-    width: 720px;
-    padding: 24px 0;
+    width: 90%;
     margin: 0 auto;
 }
 
+div.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+div.aside-manual {
+    width: 420px;
+}
+
+div.sudoku-grid {
+    /* border: 1px solid #082e54;
+    width: 720px;
+    margin: 0 auto; */
+    padding: 48px 0 0 0;
+    margin-bottom: 24px;
+    /* height: 480px; */
+    /* margin: 0 auto; */
+}
+
 div.control-buttons {
+    /* border: 1px solid #082e54; */
+    /* width: 720px;
+    margin: 0 auto; */
+    height: 60px;
+    /* margin: 0 auto; */
 }
 
 
 button {
-      float: right;
-      margin: 6px 9px;
-      border: 2px solid #333;
+      /* float: right; */
+      margin: 6px 9px 6px 0;
+      border: 2px solid #082e54;
       background: #005bae;
       /* background: transparent; */
       padding: 8px 12px;
@@ -46,13 +64,17 @@ button:hover:disabled {
 }
 
 table {
-    margin: 24px auto;
+    /* margin: 24px auto; */
+    /* float: right; */
     border-collapse: collapse;
+    margin-bottom: 36px;
+    width: 360px;
+    height: 360px;
 }
 
 input {
-    height: 36px;
-    width: 36px;
+    height: 40px;
+    width: 40px;
     border-style: none;
     text-align: center;
 }

@@ -8,116 +8,31 @@
     <link rel="stylesheet" href="{{ static_url('css/sudoku.css') }}" type="text/css">
   </head>
   <body>
-    <div class="sudoku-grid">
-      <table>
-	<tr class="row">
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	</tr>
-	<tr class="row">
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	</tr>
-	<tr class="row">
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	</tr>
-	<tr class="row">
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	</tr>
-	<tr class="row">
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	</tr>
-	<tr class="row">
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	</tr>
-	<tr class="row">
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	</tr>
-	<tr class="row">
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	</tr>
-	<tr class="row">
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	  <td class="cell"><input type="text" maxlength="1"></td>
-	</tr>
-      </table>
-      <div class="control-buttons">
-        <button id="reset-puzzle">重置迷题</button>
-        <button id="solve-puzzle">开始摇滚</button>
+    <div class="container">
+      <div class="sudoku-grid">
+	<table>
+	  <tbody>
+	    {% for i in range(9) %}
+	    <tr class="row">
+	      {%for j in range(9) %}
+	      <td class="cell"><input type="text" maxlength="1"></input></td>
+	      {% end %}  
+	    </tr>
+	    {% end %}
+	  </tbody>
+	</table>
+	<div class="control-buttons">
+          <button id="solve-puzzle">开始摇滚</button>
+          <button id="reset-puzzle">重置迷题</button>
+	</div>
+      </div>
+      <div class="aside-manual">
+	<h4>Manual</h4>
       </div>
     </div>
-    <script src="{{ static_url('js/lib/jquery-2.1.4.min.js') }}"></script>
-    <script src="{{ static_url('js/solver.js') }}"></script>
-  </body>
+<script src="{{ static_url('js/lib/jquery-2.1.4.min.js') }}"></script>
+<script src="{{ static_url('js/solver.js') }}"></script>
+</body>
 </html>
 
 

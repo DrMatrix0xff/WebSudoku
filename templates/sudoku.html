@@ -15,7 +15,7 @@
 	    {% for i in range(9) %}
 	    <tr class="row">
 	      {%for j in range(9) %}
-	      <td class="cell"><input type="text" maxlength="1"></input></td>
+	      <td class="cell"><input type="text" maxlength="1"></td>
 	      {% end %}  
 	    </tr>
 	    {% end %}
@@ -27,7 +27,11 @@
 	</div>
       </div>
       <div class="aside-manual">
-	<h4>Manual</h4>
+	<h4>使用说明</h4>
+	<p>如果你被一个数独问题困扰，苦于无法获得解答，使用本网页上的数独求解器可消除你的困扰。</p>
+	<p>依照数独题目，在相应的格子中输入已知数字，你可以通过方向键移动输入格，输入完成后点击`开始摇滚`，答案就会呈现在数独表格中。</p>
+	<p>解决一道数独题后，`开始摇滚`暂时变为无法点击状态，点击`重置迷题`可恢复正常。</p>
+	<p>任何时候点击`重置迷题`按钮，你将回到刚加载本网页的状态。</p>
       </div>
     </div>
 <script src="{{ static_url('js/lib/jquery-2.1.4.min.js') }}"></script>

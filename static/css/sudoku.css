@@ -25,6 +25,11 @@ div.sudoku-grid {
     /* margin: 0 auto; */
 }
 
+div.sudoku-grid > div {
+    width: 480px;
+    float: right;
+}
+
 div.control-buttons {
     /* border: 1px solid #082e54; */
     /* width: 720px;

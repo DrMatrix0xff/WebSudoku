@@ -10,20 +10,22 @@
   <body>
     <div class="container">
       <div class="sudoku-grid">
-	<table>
-	  <tbody>
-	    {% for i in range(9) %}
-	    <tr class="row">
-	      {%for j in range(9) %}
-	      <td class="cell"><input type="text" maxlength="1"></td>
-	      {% end %}  
-	    </tr>
-	    {% end %}
-	  </tbody>
-	</table>
-	<div class="control-buttons">
-          <button id="solve-puzzle">开始摇滚</button>
-          <button id="reset-puzzle">重置迷题</button>
+	<div>
+	  <table>
+	    <tbody>
+	      {% for i in range(9) %}
+	      <tr class="row">
+		{%for j in range(9) %}
+		<td class="cell"><input type="text" maxlength="1"></td>
+		{% end %}  
+	      </tr>
+	      {% end %}
+	    </tbody>
+	  </table>
+	  <div class="control-buttons">
+            <button id="solve-puzzle">开始摇滚</button>
+            <button id="reset-puzzle">重置迷题</button>
+	  </div>
 	</div>
       </div>
       <div class="aside-manual">
@@ -34,9 +36,9 @@
 	<p>任何时候点击`重置迷题`按钮，你将回到刚加载本网页的状态。</p>
       </div>
     </div>
-<script src="{{ static_url('js/lib/jquery-2.1.4.min.js') }}"></script>
-<script src="{{ static_url('js/solver.js') }}"></script>
-</body>
+    <script src="{{ static_url('js/lib/jquery-2.1.4.min.js') }}"></script>
+    <script src="{{ static_url('js/solver.js') }}"></script>
+  </body>
 </html>
 
 

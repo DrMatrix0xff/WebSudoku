@@ -2,6 +2,47 @@ $(document).ready(
   function () {
     var inputs = $('input');
     var c0 = inputs['0'];
+    c0.focus();
+    $(document).keydown(
+      function (e) {
+        var fi = $('input:focus');
+        var i = 0;
+        for (i = 0; i < 81; i++) {
+          if (inputs[String(i)] === fi[0]) {
+            break;
+          }
+        }
+        console.log('i = %d', i);
+        switch (e.which) {
+          case 37:
+            if (i >= 1) {
+              i -= 1;
+              inputs[String(i)].focus();
+            }
+            break;
+          case 38:
+            if (i >= 9) {
+              i -= 9;
+              inputs[String(i)].focus();
+            }
+            break;
+          case 39:
+            if (i < 80) {
+              i += 1;
+              inputs[String(i)].focus();
+            }
+            break;
+          case 40:
+            if (i <= 71) {
+              i += 9;
+              inputs[String(i)].focus();
+            }
+            break;
+          default: return;
+        }
+        e.preventDefault();
+      }
+    );
     $('#reset-puzzle').click(
       function () {
         var c, k;
@@ -15,30 +56,8 @@ $(document).ready(
         c0.focus(); 
         if ($('#solve-puzzle').attr('disabled')) {
           $('#solve-puzzle').removeAttr('disabled');
-          // $('#solve-puzzle').removeClass('toggle-color');
         }
       });
-
-    /* $("#reset-puzzle").hover(
-        function () {
-            $(this).addClass('toggle-color');
-        },
-        function () {
-            $(this).removeClass('toggle-color');
-        }
-    );
-
-    $("#solve-puzzle").hover(
-        function () {
-            if ($(this).attr('disabled')) {
-            } else {
-                $(this).addClass('toggle-color');
-            }
-        },
-        function () {
-            $(this).removeClass('toggle-color');
-        }
-    ); */
 
     $('#solve-puzzle').click(
       function () {
@@ -82,7 +101,7 @@ $(document).ready(
               for (i = 0; i < userin.length; i++) {
                   idx = userin[i];
                   c = $(inputs[String(idx)]);
-                  c.css("background-color", "#ccc");
+                  c.css("background-color", "#87ceeb");
               }
             } else if (data.eno === 1) {
               window.alert("Invalid input puzzle, please check again");
@@ -92,13 +111,7 @@ $(document).ready(
               return;
             }
           }
-	  /*
-          error: function (xhr, status) {
-            window.alert("Cannot Find Any Solution, Please Check Your Puzzle!");
-	  }
-	  */
         });
-        // $(this).removeAttr('disabled');
       });
   });
 

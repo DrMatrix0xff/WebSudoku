@@ -12,7 +12,6 @@ $(document).ready(
             break;
           }
         }
-        // console.log('i = %d', i);
         switch (e.which) {
           case 37:
             if (i >= 1) {

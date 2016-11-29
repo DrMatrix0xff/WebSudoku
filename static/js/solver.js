@@ -2,7 +2,17 @@ $(document).ready(
   function () {
     var inputs = $('input');
     var c0 = inputs['0'];
+    var solveb = $('#solve-puzzle')['0'];
+    var resetb = $('#reset-puzzle')['0'];
     c0.focus();
+    $('#open-sidenav').click(
+	function () {
+            $('#side-words').css('display', 'block');
+	});
+    $('#close-sidenav').click(
+	function () {
+            $('#side-words').css('display', 'none');
+	});
     $(document).keydown(
       function (e) {
         var fi = $('input:focus');
@@ -37,6 +47,12 @@ $(document).ready(
               inputs[String(i)].focus();
             }
             break;
+	  case 13:
+	    solveb.click();
+	    break;
+	  case 27:
+	    resetb.click();
+	    break;
           default: return;
         }
         e.preventDefault();
@@ -113,6 +129,4 @@ $(document).ready(
         });
       });
   });
-
-
 

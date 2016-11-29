@@ -3,39 +3,49 @@
   <head>
     <meta charset=utf-8>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sudoku Solution</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sudoku迷题解惑 - By Hu</title>
     <link rel="icon" href="{{ static_url('img/favicon.ico') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ static_url('css/sudoku.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ static_url('css/w3.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ static_url('css/table.css') }}" type="text/css">
   </head>
-  <body>
-    <div class="container">
-      <div class="sudoku-grid">
-	<div>
-	  <table>
-	    <tbody>
-	      {% for i in range(9) %}
-	      <tr class="row">
-		{%for j in range(9) %}
-		<td class="cell"><input type="text" maxlength="1"></td>
-		{% end %}  
-	      </tr>
-	      {% end %}
-	    </tbody>
-	  </table>
-	  <div class="control-buttons">
-            <button id="solve-puzzle">开始摇滚</button>
-            <button id="reset-puzzle">重置迷题</button>
-	  </div>
-	</div>
+  <body class="w3-light-grey">
+      <div class="w3-container w3-top w3-teal w3-large w3-padding" style="z-index: 3">
+        <span class="w3-opennav w3-hide-large w3-right" id="open-sidenav">&#9776;</span>
+        <h3>解答Sudoku迷题的小工具</h3>
       </div>
-      <div class="aside-manual">
+      <nav class="w3-sidenav w3-collapse w3-animate-right w3-white w3-padding" id="side-words">
+        <span class="w3-closenav w3-large w3-hide-large" id="close-sidenav">关闭&nbsp;&times;</span>
 	<h4>使用说明</h4>
-	<p>如果你被一个数独问题困扰，苦于无法获得解答，使用本网页上的数独求解器可消除你的困扰。</p>
-	<p>依照数独题目，在相应的格子中输入已知数字，你可以通过方向键移动输入格，输入完成后点击`开始摇滚`，答案就会呈现在数独表格中。</p>
-	<p>解决一道数独题后，`开始摇滚`暂时变为无法点击状态，点击`重置迷题`可恢复正常。</p>
-	<p>任何时候点击`重置迷题`按钮，你将回到刚加载本网页的状态。</p>
-      </div>
-    </div>
+	<p class="w3-hover-text-red">如果你被一个数独问题困扰，苦于无法获得解答，使用本网页上的数独求解器可消除你的困扰。</p>
+	<p class="w3-hover-text-red">依照数独题目，在相应的格子中输入已知数字，你可以通过方向键移动输入格，输入完成后点击`开始摇滚`或按Enter键，即可得到解答。</p>
+	<p class="w3-hover-text-red">解决一道数独题目之后，`开始摇滚`变为无法点击状态，点击`重置迷题`或按Esc键可恢复正常。</p>
+	<p class="w3-hover-text-red">任何时候点击`重置迷题`或按Esc键，你将回到刚访问本网页的状态。</p>
+      </nav>
+    <div class="w3-main" id="main-container">
+      <div class="w3-row">
+	<div class="w3-col m4 s12"><p></p></div>
+	<div class="w3-col m6 s12">
+	  <div class="w3-padding w3-responsive">
+	    <table>
+	      <tbody>
+	        {% for i in range(9) %}
+	        <tr class="row">
+	  	{%for j in range(9) %}
+	  	<td class="cell"><input type="text" maxlength="1"></td>
+	  	{% end %}  
+	        </tr>
+	        {% end %}
+	      </tbody>
+	    </table>
+	    <div>
+              <button id="solve-puzzle" class="w3-btn w3-green w3-hover-white">开始摇滚</button>
+              <button id="reset-puzzle" class="w3-btn w3-blue w3-hover-white">重置迷题</button>
+	    </div>
+	</div>
+      </div> <!-- col m8 -->
+  </div> <!-- row -->
+  </div> <!-- container -->
     <script src="{{ static_url('js/lib/jquery-2.1.4.min.js') }}"></script>
     <script src="{{ static_url('js/solver.js') }}"></script>
   </body>

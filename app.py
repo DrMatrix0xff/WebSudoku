@@ -18,7 +18,7 @@ class SudokuApp(tornado.web.Application):
             #tornado.web.url(r"/logout/", handler.LogoutHandler, name='sign_out'),
         ]
         settings = {
-            'cookie_secret': '8ktx7c118bu=g!n*x@0v_n9!2(=pz-&20@2+^n^y1d=v9*wu0',
+            #'cookie_secret': '8ktx7c118bu=g!n*x@0v_n9!2(=pz-&20@2+^n^y1d=v9*wu0',
             'template_path': os.path.join(os.path.dirname(os.path.abspath(__file__)), "templates"),
             'static_path': os.path.join(os.path.dirname(os.path.abspath(__file__)), "static"),
             #'login_url': '/login/',
